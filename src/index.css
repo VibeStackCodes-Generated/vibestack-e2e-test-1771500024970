@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: oklch(0.9885097667627705 0.0057013236147819375 84.56586728745519);
+  --color-foreground: oklch(0.19721950713796968 0.01258036562938645 55.545733554101865);
+  --color-card: oklch(0.9885097667627705 0.0057013236147819375 84.56586728745519);
+  --color-card-foreground: oklch(0.19721950713796968 0.01258036562938645 55.545733554101865);
+  --color-popover: oklch(0.9885097667627705 0.0057013236147819375 84.56586728745519);
+  --color-popover-foreground: oklch(0.19721950713796968 0.01258036562938645 55.545733554101865);
+  --color-primary: oklch(0.4707835163050793 0.11214247785657594 50.84521798653445);
+  --color-primary-foreground: oklch(1.0000000000000002 0 none);
+  --color-secondary: oklch(0.75405634476336 0.08527501944736605 67.1036889502114);
+  --color-secondary-foreground: oklch(0.19721950713796968 0.01258036562938645 55.545733554101865);
+  --color-muted: oklch(0.9488366520665512 0.019315555778675723 80.11793010606416);
+  --color-muted-foreground: oklch(0.5385097667627705 0.02 84.56586728745519);
+  --color-accent: oklch(0.6551730597712464 0.1108973548192278 51.60783932619488);
+  --color-accent-foreground: oklch(0.19721950713796968 0.01258036562938645 55.545733554101865);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.985 0 0);
+  --color-border: oklch(0.830172300212372 0.033195681228985086 76.4019849980436);
+  --color-input: oklch(0.830172300212372 0.033195681228985086 76.4019849980436);
+  --color-ring: oklch(0.4707835163050793 0.07849973449960315 50.84521798653445);
+  --radius: 0.375rem;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+  --font-sans: var(--font-body);
+}
+
+.dark {
+  --color-background: oklch(0.08850976676277045 0.015701323614781937 84.56586728745519);
+  --color-foreground: oklch(0.96 0 0);
+  --color-card: oklch(0.16850976676277052 0.015701323614781937 84.56586728745519);
+  --color-card-foreground: oklch(0.96 0 0);
+  --color-popover: oklch(0.16850976676277052 0.015701323614781937 84.56586728745519);
+  --color-popover-foreground: oklch(0.96 0 0);
+  --color-primary: oklch(0.5707835163050793 0.11214247785657594 50.84521798653445);
+  --color-primary-foreground: oklch(0.10 0 0);
+  --color-secondary: oklch(0.18 0.02 84.56586728745519);
+  --color-secondary-foreground: oklch(0.96 0 0);
+  --color-muted: oklch(0.18 0.02 84.56586728745519);
+  --color-muted-foreground: oklch(0.62 0.01 250);
+  --color-accent: oklch(0.18 0.02 84.56586728745519);
+  --color-accent-foreground: oklch(0.96 0 0);
+  --color-border: oklch(0.24 0.02 84.56586728745519);
+  --color-input: oklch(0.24 0.02 84.56586728745519);
+  --color-ring: oklch(0.4707835163050793 0.07849973449960315 50.84521798653445);
+}
+
+* { @apply border-border; }
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: var(--font-body);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-display);
+}
